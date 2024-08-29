@@ -64,6 +64,27 @@
             <li>NAMULONDO JOVIA</li>
             <li>MBEIZA JEMIMAH</li>
         </ul>
+          <p id="time"></p>
+<script defer>
+function displayTime(){
+var currentTime=new Date();
+var hours=currentTime.getHours();
+var minutes=currentTime.getMinutes();
+var seconds=currentTime.getSeconds();
+
+hours=(hours<10?"0":"")+hours;
+minutes=(minutes<10?"0":"")+minutes;
+seconds=(seconds<10?"0":"")+seconds;
+var timeString= hours+":"+ minutes +":" +seconds;
+document.getElementById("time").innerHTML=timeString;
+}
+
+
+displayTime();
+setInterval(displayTime,1000);
+
+
+</script>
       </main>
       <footer>
         <p>&copy; 2024 BIOMEDICAL DESIGN GROUP</p>
